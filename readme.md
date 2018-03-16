@@ -1,13 +1,17 @@
 # QuizApplication 
 
-#Requirements
+# Requirements
+
 You must install VirtualBox 5.2
 https://www.virtualbox.org/wiki/Downloads
 
 Install Vagrant (2.0.3)
 https://www.vagrantup.com/downloads.html 
 =======
-1. vagrant box add laravel/homestead
+1. vagrant box add laravel/homestead 
+
+During dialog select option 3 (virtualbox) 
+
 2. sudo nano /etc/hosts
  add hosts there 
     192.168.10.10   homestead.test
