@@ -14,8 +14,11 @@ https://www.vagrantup.com/downloads.html
 During dialog select option 3 (virtualbox) 
 
 2. sudo nano /etc/hosts
- add hosts there 
-    192.168.10.10   homestead.test
+ 
+add hosts there 
+ 
+192.168.10.10   homestead.test
+    
 3. git clone https://github.com/laravel/homestead.git ~/Homestead
 4. cd ~/Homestead
 5. git checkout v7.3.0
