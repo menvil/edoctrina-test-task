@@ -27,7 +27,7 @@ add hosts there
 8. vagrant ssh
 9. mkdir /home/vagrant/code
 10. cd /home/vagrant/code
-11. Clone the repo: git clone git@github.com:menvil/quizapplication.git .
+11. Clone the repo: git clone git@github.com:menvil/edoctrina-test-task.git .
 12. Install Laravel: composer install --prefer-dist
 13. Rename file .env.example to .env and dit file .env for proper database values 
 
