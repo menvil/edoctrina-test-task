@@ -39,9 +39,11 @@ vagrant up
 DB_HOST=127.0.0.1
 DB_DATABASE=homestead
 DB_USERNAME=homestead
-DB_PASSWORD=
+DB_PASSWORD=secret
 
 4. Migrate your database: php artisan migrate
-5. Seed your database: php artisan db:seed
 6. Make php artisan key:generate
+
+7. npm install
+8. node socket.js
 7. View application in the browser!
