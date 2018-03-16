@@ -6,44 +6,29 @@ https://www.virtualbox.org/wiki/Downloads
 
 Install Vagrant (2.0.3)
 https://www.vagrantup.com/downloads.html 
+=======
+1. vagrant box add laravel/homestead
+2. sudo nano /etc/hosts
+ add hosts there 
+    192.168.10.10   homestead.test
+3. git clone https://github.com/laravel/homestead.git ~/Homestead
+4. cd ~/Homestead
+5. git checkout v7.3.0
+6. bash init.sh
+7. vagrant up
+8. vagrant ssh
+9. mkdir /home/vagrant/code
+10. cd /home/vagrant/code
+11. Clone the repo: git clone git@github.com:menvil/quizapplication.git .
+12. Install Laravel: composer install --prefer-dist
+13. Rename file .env.example to .env and dit file .env for proper database values 
 
-mkdir homestead
-cd homestead
-vagrant box add laravel/homestead
-vagrant init laravel/homestead
+you can make 
+mv .env.example .env
 
-config.vm.network "private_network", ip: "192.168.10.10"
-  
-vagrant up
-sudo nano /etc/hosts
-add 192.168.10.10   homestead.test
+14. Migrate your database: php artisan migrate
+15. Make php artisan key:generate
 
-config.vm.network "forwarded_port", guest: 80, host: 8080
-
-
-git clone https://github.com/laravel/homestead.git ~/Homestead
-cd ~/Homestead
-git checkout v7.3.0
-bash init.sh
-vagrant up
-
-
-
-----
-
-
-1. Clone the repo: git clone git@github.com:menvil/quizapplication.git .
-2. Install Laravel: composer install --prefer-dist
-3. Rename file .env.example to .env and dit file .env for proper database values (mv .env.example .env)
-
-DB_HOST=127.0.0.1
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
-
-4. Migrate your database: php artisan migrate
-6. Make php artisan key:generate
-
-7. npm install
-8. node socket.js
-7. View application in the browser!
+16. npm install
+17. node socket.js
+18. View application in the browser via link http://homestead.test
